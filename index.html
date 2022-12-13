@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
       <title>Together</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
      <div id="wrapper">
@@ -35,11 +36,19 @@
             </div>
             
             <div id="music">
-                  <audio loop autoplay controls>Your browser does not support the audio element.</audio>
-            </div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Jbu7B-R4ooY&ab_channel=TPTMusicForLife" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </iframe>
+              
+                          </div>
+         <script>
+setTimeout(function() {
+  var url = $('iframe').attr('src')
+  url = url+'?autoplay=1';
+  $('iframe').attr('src', url)
+}, 2000); // 2000 = 2s, 10s= 10000
+            </script>
             <footer>Thank you for your love 💕</footer>
       </div> 
-      
+   
       <script src="app.js"></script>
 </body>
 </html>
